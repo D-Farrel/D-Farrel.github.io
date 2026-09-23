@@ -1,0 +1,166 @@
+::1 - - [23/Sep/2026 18:12:41] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:12:41] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:12:41] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:12:41] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:12:41] code 404, message File not found
+::1 - - [23/Sep/2026 18:12:41] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:12:54] "GET / HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:12:54] "GET /_parts/styles.css HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:12:54] "GET /_parts/app.js HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:13:52] "GET / HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:13:52] "GET /_parts/styles.css HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:13:52] "GET /_parts/app.js HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:17:38] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:19:07] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:19:07] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:19:07] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:19:07] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:19:07] code 404, message File not found
+::1 - - [23/Sep/2026 18:19:07] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:19:55] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:19:55] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:19:55] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:19:55] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:19:55] code 404, message File not found
+::1 - - [23/Sep/2026 18:19:55] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:20:21] "GET / HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:20:21] "GET /_parts/styles.css HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:20:21] "GET /data.js HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:20:21] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:28:50] "GET / HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:28:50] "GET /data.js HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:28:50] "GET /_parts/app.js HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:28:50] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:30:09] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:30:09] "GET /_parts/styles.css HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:31:49] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:31:49] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:31:49] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:31:49] "GET /profile.png HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:31:49] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:31:49] code 404, message File not found
+::1 - - [23/Sep/2026 18:31:49] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:31:53] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:31:53] "GET /_parts/styles.css HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:31:53] "GET /profile.png HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:31:53] "GET /_parts/app.js HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:32:13] "GET / HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:32:13] "GET /_parts/app.js HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:34:56] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:34:56] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:34:56] "GET /data.js HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:34:56] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:35:12] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:35:12] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:35:12] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:35:12] "GET /profile.png HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:35:12] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:35:13] code 404, message File not found
+::1 - - [23/Sep/2026 18:35:13] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:36:56] "GET / HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:36:56] "GET /_parts/styles.css HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:36:56] "GET /_parts/app.js HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 18:41:56] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:41:56] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:41:56] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:41:56] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:41:56] code 404, message File not found
+::1 - - [23/Sep/2026 18:41:56] "GET /_parts/profile.png HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:41:56] code 404, message File not found
+::1 - - [23/Sep/2026 18:41:56] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:52:52] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:52:52] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:52:52] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:52:52] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:52:52] code 404, message File not found
+::1 - - [23/Sep/2026 18:52:52] "GET /_parts/profile.png HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:52:52] code 404, message File not found
+::1 - - [23/Sep/2026 18:52:52] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:57:52] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:57:52] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:57:52] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:57:52] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:57:52] code 404, message File not found
+::1 - - [23/Sep/2026 18:57:52] "GET /_parts/profile.png HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:57:52] code 404, message File not found
+::1 - - [23/Sep/2026 18:57:52] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:57:54] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:57:54] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:57:54] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:57:54] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:57:54] code 404, message File not found
+::1 - - [23/Sep/2026 18:57:54] "GET /_parts/profile.png HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:57:54] code 404, message File not found
+::1 - - [23/Sep/2026 18:57:54] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:58:59] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:58:59] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:58:59] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:58:59] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:58:59] code 404, message File not found
+::1 - - [23/Sep/2026 18:58:59] "GET /_parts/profile.png HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:58:59] code 404, message File not found
+::1 - - [23/Sep/2026 18:58:59] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:59:31] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:59:31] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:59:31] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:59:31] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:59:31] code 404, message File not found
+::1 - - [23/Sep/2026 18:59:31] "GET /_parts/profile.png HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:59:31] code 404, message File not found
+::1 - - [23/Sep/2026 18:59:31] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:59:55] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:59:55] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:59:55] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:59:55] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 18:59:55] code 404, message File not found
+::1 - - [23/Sep/2026 18:59:55] "GET /_parts/profile.png HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 18:59:55] code 404, message File not found
+::1 - - [23/Sep/2026 18:59:55] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 19:01:24] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:01:24] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:01:24] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:01:24] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:01:24] code 404, message File not found
+::1 - - [23/Sep/2026 19:01:24] "GET /_parts/profile.png HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 19:01:25] code 404, message File not found
+::1 - - [23/Sep/2026 19:01:25] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 19:03:15] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:03:15] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:03:15] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:03:15] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:03:15] "GET /profile.png HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:03:15] code 404, message File not found
+::1 - - [23/Sep/2026 19:03:15] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 19:03:27] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:03:27] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:03:27] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:03:27] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:03:27] "GET /profile.png HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:03:27] code 404, message File not found
+::1 - - [23/Sep/2026 19:03:27] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 19:03:37] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:03:37] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:03:37] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:03:37] "GET /profile.png HTTP/1.1" 304 -
+::1 - - [23/Sep/2026 19:04:06] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:04:06] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:04:06] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:04:06] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:04:06] "GET /profile.png HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:04:06] code 404, message File not found
+::1 - - [23/Sep/2026 19:04:06] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 19:04:09] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:04:09] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:04:09] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:04:09] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:04:09] "GET /profile.png HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:04:09] code 404, message File not found
+::1 - - [23/Sep/2026 19:04:09] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [23/Sep/2026 19:11:54] "GET / HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:11:54] "GET /foto%20formal/foto_formal.png HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:11:54] "GET /data.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:11:54] "GET /_parts/app.js HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:11:54] "GET /_parts/styles.css HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:11:54] "GET /profile.png HTTP/1.1" 200 -
+::1 - - [23/Sep/2026 19:11:54] code 404, message File not found
+::1 - - [23/Sep/2026 19:11:54] "GET /favicon.ico HTTP/1.1" 404 -
