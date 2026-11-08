@@ -131,71 +131,193 @@
     $('#socials').innerHTML = socialsHTML;
 
     // Contact Page
-    const telHref = 'tel:' + pf.phone.replace(/\\s/g, '');
+    const telHref = 'tel:' + pf.phone.replace(/\s/g, '');
     const channels = [
-      { icon: 'email', label: 'Email', value: pf.email, url: 'mailto:' + pf.email },
-      { icon: 'whatsapp', label: 'WhatsApp', value: pf.phone, url: 'https://wa.me/' + pf.whatsapp },
-      { icon: 'phone', label: 'Phone', value: pf.phone, url: telHref }
+      { 
+        icon: 'email', 
+        tag: 'DIRECT INBOX', 
+        label: 'Email Dispatch', 
+        value: pf.email, 
+        sub: 'Best for internship inquiries, project proposals & formal correspondence.',
+        url: 'mailto:' + pf.email,
+        action: 'Send Email'
+      },
+      { 
+        icon: 'whatsapp', 
+        tag: 'FAST RESPONSE', 
+        label: 'WhatsApp Chat', 
+        value: pf.phone, 
+        sub: 'Quick chats, direct networking & immediate discussions.',
+        url: 'https://wa.me/' + pf.whatsapp,
+        action: 'Open Chat'
+      },
+      { 
+        icon: 'phone', 
+        tag: 'VOICE LINE', 
+        label: 'Direct Phone', 
+        value: pf.phone, 
+        sub: 'Available during business hours (UTC+7 / Jakarta WIB).',
+        url: telHref,
+        action: 'Call'
+      }
     ];
     const contactChEl = $('#contactChannels');
     if (contactChEl) {
       contactChEl.innerHTML = channels.map(c => `
-        <a href="${c.url}" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:24px; color:var(--text-main); padding:24px; border:1px solid var(--border); border-radius:4px; text-decoration:none; transition:0.3s; background:var(--surface);">
-          <div style="color:var(--text-main);">${ICONS[c.icon]}</div>
-          <div>
-            <div style="font-size:12px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; font-family:var(--font-mono); margin-bottom:4px;">${c.label}</div>
-            <div style="font-size:18px; font-weight:500;">${c.value}</div>
+        <a href="${c.url}" target="_blank" rel="noopener" class="contact-channel-card">
+          <div class="cc-icon-wrap">${ICONS[c.icon]}</div>
+          <div class="cc-content">
+            <div class="cc-header">
+              <span class="cc-tag font-mono">${c.tag}</span>
+              <span class="cc-action font-mono">${c.action} &nearr;</span>
+            </div>
+            <div class="cc-label">${c.label}</div>
+            <div class="cc-value font-mono">${c.value}</div>
+            <p class="cc-sub">${c.sub}</p>
           </div>
         </a>`).join('');
     }
     const cpSocials = $('#contactPageSocials');
-    if (cpSocials) cpSocials.innerHTML = socialsHTML;
+    if (cpSocials) {
+      const socialList = [
+        { icon: 'linkedin', name: 'LinkedIn', handle: 'donbosco-farrel', url: pf.linkedin, desc: 'Professional Network' },
+        { icon: 'github', name: 'GitHub', handle: 'D-Farrel', url: pf.github, desc: 'Source Code Repositories' },
+        { icon: 'tableau', name: 'Tableau', handle: 'donbosco.farrel', url: pf.tableau, desc: 'Interactive Visualizations' },
+        { icon: 'instagram', name: 'Instagram', handle: '@donboscofr', url: pf.instagram, desc: 'Personal Updates' }
+      ];
+      cpSocials.innerHTML = socialList.map(s => `
+        <a href="${s.url}" target="_blank" rel="noopener" class="contact-social-item">
+          <div class="cs-icon">${ICONS[s.icon]}</div>
+          <div class="cs-info">
+            <span class="cs-name">${s.name}</span>
+            <span class="cs-handle font-mono">${s.handle}</span>
+          </div>
+          <span class="cs-arrow">&nearr;</span>
+        </a>
+      `).join('');
+    }
 
     // Resume
     const rs = DATA.resume;
     const pdfBtn = rs.pdfUrl
-      ? `<a class="btn-primary" href="${rs.pdfUrl}" download>Download PDF</a>`
-      : `<span style="color:var(--text-muted); font-size:13px; border:1px dashed var(--border); padding:8px 16px; border-radius:2px;">PDF Unavailable</span>`;
+      ? `<a class="btn-download-pdf" href="${rs.pdfUrl}" download>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          <span>Download PDF CV</span>
+        </a>`
+      : `<span class="btn-disabled-pdf">PDF Unavailable</span>`;
     
     const resumeEl = $('#resumeBody');
     if (resumeEl) {
       resumeEl.innerHTML = `
-        <a href="#" class="back-link">&larr; Return to Presentation</a>
-        <div class="resume-head">
-          <div>
-            <h1 style="font-size:clamp(32px, 5vw, 64px); font-weight:700; color:var(--text-main); margin-bottom:4px; letter-spacing:-0.03em;">${pf.name}</h1>
-            <p class="resume-role">${rs.role} • ${rs.location}</p>
+        <div class="resume-container">
+          <!-- Top Back Bar -->
+          <div class="resume-topbar">
+            <a href="#" class="resume-back-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>Back to Presentation</span>
+            </a>
+            ${pdfBtn}
           </div>
-          ${pdfBtn}
-        </div>
-        <div class="resume-grid">
-          <div class="resume-main">
-            <h3 class="resume-sec">Experience</h3>
-            ${rs.experience.map(x => `<div class="r-item">
-              <div class="r-item-head"><h4>${x.role}</h4><span>${x.period}</span></div>
-              <p class="r-org">${x.org}</p>
-              <ul>${x.points.map(p => `<li>${p}</li>`).join('')}</ul>
-            </div>`).join('')}
-            
-            <h3 class="resume-sec" style="margin-top:64px;">Education</h3>
-            ${rs.education.map(e => `<div class="r-item">
-              <div class="r-item-head"><h4>${e.school}</h4><span>${e.period}</span></div>
-              <p class="r-org">${e.degree}</p>
-              <p style="color:var(--text-muted); font-size:15px; margin-top:12px;">${e.note}</p>
-            </div>`).join('')}
-          </div>
-          <aside class="resume-aside">
-            <h3 class="resume-sec">Skills</h3>
-            <div style="display:flex; flex-direction:column; gap:32px;">
-              ${DATA.skills.map(s => `<div>
-                <div style="font-size:12px; font-family:var(--font-mono); text-transform:uppercase; letter-spacing:1px; font-weight:500; color:var(--text-muted); margin-bottom:12px;">${s.cat}</div>
-                <div style="display:flex; flex-wrap:wrap; gap:12px;">
-                  ${s.items.map(i => `<span style="font-size:14px; font-weight:300; color:var(--text-main);">${i}</span>`).join('')}
-                </div>
-              </div>`).join('')}
+
+          <!-- Hero Identity Card -->
+          <div class="resume-hero-card">
+            <div class="rh-left">
+              <div class="rh-badge"><span class="rh-dot"></span> Available for Data Engineering &amp; Analytics Roles</div>
+              <h1 class="rh-name">${pf.name}</h1>
+              <p class="rh-role">${rs.role} <span class="rh-sep">&bull;</span> ${rs.location}</p>
+              <p class="rh-summary">${rs.summary}</p>
             </div>
-          </aside>
-        </div>`;
+            <div class="rh-contacts">
+              <a href="mailto:${pf.email}" class="rh-contact-pill">
+                ${ICONS.email}
+                <span>${pf.email}</span>
+              </a>
+              <a href="https://linkedin.com/in/donbosco-farrel-81691b322" target="_blank" rel="noopener" class="rh-contact-pill">
+                ${ICONS.linkedin}
+                <span>LinkedIn Profile</span>
+              </a>
+              <a href="https://github.com/D-Farrel" target="_blank" rel="noopener" class="rh-contact-pill">
+                ${ICONS.github}
+                <span>GitHub Archive</span>
+              </a>
+              <a href="https://public.tableau.com/app/profile/donbosco.farrel" target="_blank" rel="noopener" class="rh-contact-pill">
+                ${ICONS.tableau}
+                <span>Tableau Visualizations</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2-Column Content Grid -->
+          <div class="resume-layout-grid">
+            <!-- Left Main Column (Experience & Education) -->
+            <div class="resume-col-main">
+              <!-- Section: Experience -->
+              <section class="resume-card-block">
+                <div class="rc-header">
+                  <span class="rc-idx font-mono">01.</span>
+                  <h2 class="rc-title">Experience &amp; Key Deployments</h2>
+                </div>
+                <div class="rc-timeline">
+                  ${rs.experience.map(x => `
+                    <div class="timeline-item">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-head">
+                        <h3 class="timeline-role">${x.role}</h3>
+                        <span class="timeline-period font-mono">${x.period}</span>
+                      </div>
+                      <p class="timeline-org font-mono">${x.org}</p>
+                      <ul class="timeline-points">
+                        ${x.points.map(p => `<li>${p}</li>`).join('')}
+                      </ul>
+                    </div>
+                  `).join('')}
+                </div>
+              </section>
+
+              <!-- Section: Education -->
+              <section class="resume-card-block" style="margin-top: 28px;">
+                <div class="rc-header">
+                  <span class="rc-idx font-mono">02.</span>
+                  <h2 class="rc-title">Education</h2>
+                </div>
+                <div class="rc-timeline">
+                  ${rs.education.map(e => `
+                    <div class="timeline-item">
+                      <div class="timeline-dot"></div>
+                      <div class="timeline-head">
+                        <h3 class="timeline-role">${e.school}</h3>
+                        <span class="timeline-period font-mono">${e.period}</span>
+                      </div>
+                      <p class="timeline-org font-mono" style="color:var(--text-main); font-weight:500;">${e.degree}</p>
+                      <p class="timeline-note font-mono">${e.note}</p>
+                    </div>
+                  `).join('')}
+                </div>
+              </section>
+            </div>
+
+            <!-- Right Sidebar Column (Core Competencies & Stack) -->
+            <div class="resume-col-side">
+              <section class="resume-card-block">
+                <div class="rc-header">
+                  <span class="rc-idx font-mono">03.</span>
+                  <h2 class="rc-title">Core Competencies</h2>
+                </div>
+                <div class="skills-stack-groups">
+                  ${DATA.skills.map(s => `
+                    <div class="skill-group">
+                      <div class="skill-group-label font-mono">${s.cat}</div>
+                      <div class="skill-pills">
+                        ${s.items.map(i => `<span class="skill-pill font-mono">${i}</span>`).join('')}
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      `;
     }
   }
 
@@ -210,12 +332,27 @@
           navDots.forEach(dot => dot.classList.remove('active'));
           const activeDot = $('#slideNav a[href="#' + entry.target.id + '"]');
           if (activeDot) activeDot.classList.add('active');
+          $$('.top-nav-pill .nav-link').forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+          });
         }
       });
     }, { threshold: 0.5 }); // triggers when 50% of the slide is visible
     
     slides.forEach(slide => slideObserver.observe(slide));
   }
+
+  /* Smooth scroll for top nav pill links */
+  $$('.top-nav-pill a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
+      if (targetId && !targetId.startsWith('#/')) {
+        e.preventDefault();
+        const targetSection = $(targetId);
+        if (targetSection) targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
 
   /* Smooth scroll for nav dots click */
   navDots.forEach(dot => {
@@ -234,31 +371,37 @@
   let transitioning = false;
 
   function runTransition(targetId) {
-    if (transitioning) return; transitioning = true;
-    ptOverlay.classList.add('active');
+    if (transitioning) return; 
+    transitioning = true;
+    if (ptOverlay) ptOverlay.classList.add('active');
     
     setTimeout(() => {
       $$('.page-view').forEach(v => v.classList.remove('active'));
-      $(targetId).classList.add('active');
-      window.scrollTo(0, 0);
+      const target = $(targetId);
+      if (target) {
+        target.classList.add('active');
+        window.scrollTo(0, 0);
+      }
       
       // Control scroll snap based on view
       if (targetId === '#view-main') {
         document.documentElement.style.scrollSnapType = 'y mandatory';
         document.documentElement.style.overflowY = 'scroll';
-        $('#slideNav').style.display = 'flex';
-        $('.top-nav').style.display = 'flex';
+        if ($('#slideNav')) $('#slideNav').style.display = 'flex';
+        if ($('.top-nav')) $('.top-nav').style.display = 'flex';
       } else {
         document.documentElement.style.scrollSnapType = 'none';
         document.documentElement.style.overflowY = 'auto';
-        $('#slideNav').style.display = 'none';
-        $('.top-nav').style.display = 'none';
+        if ($('#slideNav')) $('#slideNav').style.display = 'none';
+        if ($('.top-nav')) $('.top-nav').style.display = 'none';
       }
 
-      observeReveals($(targetId));
-      ptOverlay.classList.remove('active'); 
+      if (target) observeReveals(target);
+      if (ptOverlay) ptOverlay.classList.remove('active'); 
       transitioning = false; 
-    }, 500);
+    }, 350);
+
+    setTimeout(() => { transitioning = false; }, 800);
   }
 
   function handleRoute() {
@@ -275,6 +418,29 @@
   }
   
   window.addEventListener('hashchange', handleRoute);
+
+  // Instant route on page load if hash exists
+  if (location.hash) {
+    setTimeout(handleRoute, 100);
+  }
+
+  // Intercept resume button and back button clicks
+  document.addEventListener('click', (e) => {
+    const resumeBtn = e.target.closest('a[href="#/resume"]');
+    if (resumeBtn) {
+      e.preventDefault();
+      location.hash = '#/resume';
+      runTransition('#view-resume');
+      return;
+    }
+    const backBtn = e.target.closest('.resume-back-btn, .back-link, a[href="#"]');
+    if (backBtn && !e.target.closest('.top-nav-pill')) {
+      e.preventDefault();
+      location.hash = '';
+      runTransition('#view-main');
+      return;
+    }
+  });
 
   /* Reveals */
   var io;

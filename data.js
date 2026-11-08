@@ -93,7 +93,7 @@ const DATA = {
   resume: {
     role: "Data Engineer & CS Student",
     location: "Jakarta, Indonesia",
-    pdfUrl: "",
+    pdfUrl: "CV/Don_Bosco_Farrel_CV_Updated.pdf",
     summary: "Computer Science student at BINUS University focused on the full data lifecycle — building ETL pipelines, data warehouses, and analytics dashboards that turn raw data into decisions.",
     education: [
       { school: "BINUS University, Jakarta", degree: "B.Sc. Computer Science", period: "2023 — Present", note: "Focus: Data Engineering & Analytics" }

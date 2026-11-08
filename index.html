@@ -6,7 +6,7 @@
 <title>DB_FARREL</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="_parts/styles.css">
 </head>
 <body class="loading">
@@ -34,11 +34,27 @@
   <a href="#contact" class="nav-dot" data-title="05 CONTACT"><span></span></a>
 </nav>
 
-<!-- Top Minimal Navbar -->
-<nav class="top-nav">
-  <a class="logo" href="#hero">F</a>
-  <a class="btn-resume-top" href="#/resume">View Full Resume</a>
-</nav>
+<!-- Top Floating Island Navbar -->
+<header class="top-nav top-nav-wrap">
+  <nav class="top-nav-pill">
+    <a class="nav-brand" href="#hero">
+      <span class="brand-monogram">DF</span>
+      <span class="status-indicator" title="Available for opportunities"><span class="status-dot"></span></span>
+    </a>
+    <div class="nav-divider"></div>
+    <div class="nav-links">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Work</a>
+      <a href="#skills" class="nav-link">Capabilities</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-divider"></div>
+    <a class="btn-resume-pill" href="#/resume">
+      <span>Resume</span>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+    </a>
+  </nav>
+</header>
 
 <!-- Main Slide Deck -->
 <div id="view-main" class="page-view active" style="padding:0;">
@@ -127,13 +143,35 @@
 </div>
 
 <!-- View: Contact Page (Details) -->
-<div id="view-contact" class="page-view" style="max-width:var(--max-w); margin:0 auto; padding-left:var(--pad); padding-right:var(--pad);">
-  <a class="back-link" href="#">&larr; Return to Presentation</a>
-  <h2 class="page-title">Get in touch.</h2>
-  <p class="page-lead">Open to internships & collaborations in data engineering and analytics. Reach me directly through any of these channels.</p>
-  
-  <div style="display:flex; flex-direction:column; gap:16px; max-width: 600px;" id="contactChannels"></div>
-  <div style="margin-top: 64px; display:flex; gap:24px;" id="contactPageSocials"></div>
+<div id="view-contact" class="page-view">
+  <div class="contact-page-container">
+    <!-- Top Bar -->
+    <div class="contact-topbar">
+      <a href="#" class="resume-back-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span>Back to Presentation</span>
+      </a>
+    </div>
+
+    <!-- Contact Hero -->
+    <div class="contact-hero-block">
+      <div class="contact-status-badge"><span class="rh-dot"></span> Open to new opportunities</div>
+      <h1 class="contact-page-title">Let's build<br>something together.</h1>
+      <p class="contact-page-desc">Currently open to internships and collaborations in data engineering, ETL architecture, and analytics. My inbox is always open.</p>
+    </div>
+
+    <!-- Contact Grid -->
+    <div class="contact-grid">
+      <!-- Primary Channels -->
+      <div class="contact-channels" id="contactChannels"></div>
+      
+      <!-- Social Links -->
+      <div class="contact-socials-card">
+        <h3 class="contact-card-label font-mono">Connect</h3>
+        <div class="contact-social-links" id="contactPageSocials"></div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- View: Resume Page -->
